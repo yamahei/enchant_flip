@@ -1,60 +1,118 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no"> 
-        <meta name="apple-mobile-web-app-capable" content="yes"> 
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <title>enchant</title>
-        <style>
-            #AdBlock {
-                position: absolute;
-                left: 0; bottom: 0;
-                width: 100%; height: 50px;
-                overflow: hidden;
-            }
-        </style>
-        <script type="text/javascript" src="./strage.js"></script>
-        <script type="text/javascript" src="./enchant.js"></script>
-        <script type="text/javascript" src="./enchant-plugins/ui.enchant.js"></script>
-        <script type="text/javascript" src="./game.js"></script>
-        <script type="text/javascript" src="./controller.js"></script>
-        <script type="text/javascript" src="./titleManager.js"></script>
-        <script type="text/javascript" src="./stageManager.js"></script>
-        <script type="text/javascript" src="./cardManager.js"></script>
-        <script type="text/javascript" src="./infoManager.js"></script>
-        <script type="text/javascript" src="./charManager.js"></script>
-        <script type="text/javascript" src="./bgManager.js"></script>
-        <script type="text/javascript" src="./object.js"></script>
-        <script type="text/javascript" src="./plugins/plugin-loader.js"></script>
-        <link rel="stylesheet" href="plugins/plugin-loader.css" />
-        <script type="text/javascript">
-            // function appExit(){
-            //   navigator.app.exitApp();
-            // }
-            // if(typeof monaca === "undefined"){
-                window.addEventListener("load", function(){ init(); }, false);
-            // }else{
-            //     document.addEventListener("deviceready", function(){
-            //         init();
-            //     }, false);
-            // }
-        </script>
-        <style type="text/css">
-            body {
-                margin: 0; padding: 0;
-                background-color: white;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="AdBlock">
-        <!-- nend -->
-<!--<script type="text/javascript">
-var nend_params = {"media":5467,"site":26280,"spot":42164,"type":1,"oriented":3};
-</script>
-<script type="text/javascript" src="http://js1.nend.net/js/nendAdLoader.js"></script>-->
-        <!-- nend -->
-        </div>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <title>Flip!</title>
+    <style>img { max-width: 100%; }</style>
+    <script></script>
+</head>
+<body>
+<!-- https://markdowntohtml.com/
+
+わが子の知育を目指して作った「Flip!」をブラウザゲームとして復刻しました
+================================================================================
+
+![image](promote/commercial_image1024x500.png)
+
+子供が生まれた時に、知育ゲームがあれば楽しみながら賢くなってくれるかな～と淡い期待を込めて作ったゲームを復刻しました。
+淡い期待は泡となって弾けてしまいましたが。
+
+
+遊び方
+------
+
+⇒[Flipで遊ぶ](pwa.html)
+
+いわゆる神経衰弱のルールで2枚のカードが揃えて消します。
+全てのカードが消えればステージクリア。
+
+制限時間以内なら何回間違えてもOK、なかなかクリアできないと妖精が助けにきてくれます。
+ステージが進むとお邪魔キャラクタも登場します。
+
+なお、スワイプ操作はありません。
+
+
+動作環境など
+------------
+Flip! はJavaScriptで開発しています。 PCやスマートフォンのブラウザで遊べます。
+
+TODO: PWA対応していますので、ホームに追加してオフラインで遊ぶこともできます。
+
+
+ライブラリ、素材
+----------------
+
+* 画像素材
+  * First seed material
+* 効果音素材
+  * [ザ・マッチメイカァズ](http://osabisi.sakura.ne.jp/m2/)
+* ロゴジェネレータ
+  * [Supalogo](https://supalogo.com/)
+* ゲームエンジン
+  * [enchant.js](https://github.com/wise9/enchant.js)
+
+開発
+----
+
+* ソースコード
+  * [yamahei/enchant_flip \| GitHub](https://github.com/yamahei/enchant_flip)
+* テキストエディタ
+  * [Atom](https://atom.io/)
+* 画像編集
+  * [GIMP](https://www.gimp.org/)
+
+-->
+
+<h1 id="-flip-">わが子の知育を目指して作った「Flip!」をブラウザゲームとして復刻しました</h1>
+<p><img src="promote/commercial_image1024x500.png" alt="image"></p>
+<p>子供が生まれた時に、知育ゲームがあれば楽しみながら賢くなってくれるかな～と淡い期待を込めて作ったゲームを復刻しました。
+淡い期待は泡となって弾けてしまいましたが。</p>
+<h2 id="-">遊び方</h2>
+<p>⇒<a href="pwa.html">Flipで遊ぶ</a></p>
+<p>いわゆる神経衰弱のルールで2枚のカードが揃えて消します。
+全てのカードが消えればステージクリア。</p>
+<p>制限時間以内なら何回間違えてもOK、なかなかクリアできないと妖精が助けにきてくれます。
+ステージが進むとお邪魔キャラクタも登場します。</p>
+<p>なお、スワイプ操作はありません。</p>
+<h2 id="-">動作環境など</h2>
+<p>Flip! はJavaScriptで開発しています。 PCやスマートフォンのブラウザで遊べます。</p>
+<p>TODO: PWA対応していますので、ホームに追加してオフラインで遊ぶこともできます。</p>
+<h2 id="-">ライブラリ、素材</h2>
+<ul>
+<li>画像素材<ul>
+<li>First seed material</li>
+</ul>
+</li>
+<li>効果音素材<ul>
+<li><a href="http://osabisi.sakura.ne.jp/m2/">ザ・マッチメイカァズ</a></li>
+</ul>
+</li>
+<li>ロゴジェネレータ<ul>
+<li><a href="https://supalogo.com/">Supalogo</a></li>
+</ul>
+</li>
+<li>ゲームエンジン<ul>
+<li><a href="https://github.com/wise9/enchant.js">enchant.js</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="-">開発</h2>
+<ul>
+<li>ソースコード<ul>
+<li><a href="https://github.com/yamahei/enchant_flip">yamahei/enchant_flip | GitHub</a></li>
+</ul>
+</li>
+<li>テキストエディタ<ul>
+<li><a href="https://atom.io/">Atom</a></li>
+</ul>
+</li>
+<li>画像編集<ul>
+<li><a href="https://www.gimp.org/">GIMP</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+</body>
 </html>

@@ -1,7 +1,7 @@
 /**
  * enchant.js v0.6.2
  * http://enchantjs.com
- * 
+ *
  * Copyright Ubiquitous Entertainment Inc.
  * Released under the MIT license.
  */
@@ -362,7 +362,7 @@ enchant.ENV = {
         }
     }()),
     /**
-     * Determines if for current browser Flash should be used to play 
+     * Determines if for current browser Flash should be used to play
      * sound instead of the native audio class.
      * @type {Boolean} True, if flash should be used.
      */
@@ -2182,7 +2182,7 @@ enchant.Sprite = enchant.Class.create(enchant.Entity, {
      * @example
      *   var bear = new Sprite(32, 32);
      *   bear.image = core.assets['chara1.gif'];
-     *   
+     *
      * @constructs
      * @extends enchant.Entity
      */
@@ -4529,7 +4529,8 @@ enchant.WebAudioSound = enchant.Class.create(enchant.EventTarget, {
      * @constructs
      */
     initialize: function() {
-        if(!window.webkitAudioContext){
+        if(!window.AudioContext){
+        //if(!window.webkitAudioContext){//BUG: https://github.com/wise9/enchant.js/issues/232
             throw new Error("This browser does not support WebAudio API.");
         }
         var actx = enchant.WebAudioSound.audioContext;

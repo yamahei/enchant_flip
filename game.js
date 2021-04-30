@@ -7,7 +7,7 @@ var fullPathOfRootDir = function(fileName){
 };
 
 var APP = {MODE: {FREE: "FREE", SHARE: "SHARE"}};
-var APP_MODE = APP.MODE.FREE;    
+var APP_MODE = APP.MODE.FREE;
 var FPS = 24;
 var DATAKEY = 'FLIP_DATA';
 var DATAKEY_HISCORES = 'HISCORES';
@@ -36,20 +36,20 @@ var IMG_BG_6_DIRT_LEDGE = fullPathOfRootDir('resource/bg_dirt-ledge.png');
 var IMG_BG_7_DIRT_GRAVEL = fullPathOfRootDir('resource/bg_dirt-gravel.png');
 var IMG_BG_8_LAVA_ORE = fullPathOfRootDir('resource/bg_lava-ore.png');
 
-var SOUND_CLEAR = fullPathOfRootDir('resource/clear_animal01.wav');
-var SOUND_OVER = fullPathOfRootDir('resource/gameover_animal02.wav');
-var SOUND_HURRY = fullPathOfRootDir('resource/hurry_beep12.wav');
-var SOUND_MEMORIZE = fullPathOfRootDir('resource/memorize_whistle00.wav');
-var SOUND_START = fullPathOfRootDir('resource/start_whistle02.wav');
-var SOUND_FLIP = fullPathOfRootDir('resource/flip_sha00.wav');
-var SOUND_BINGO = fullPathOfRootDir('resource/bingo_coin03.wav');
-var SOUND_NG = fullPathOfRootDir('resource/NG_beep14.wav');
-//var SOUND_SEC = fullPathOfRootDir('resource/sec_kachi24.wav');
-var SOUND_FRAME = fullPathOfRootDir('resource/frame_fire01.wav');
-var SOUND_ICE = fullPathOfRootDir('resource/icing_freeze04.wav');
-var SOUND_MOVE = fullPathOfRootDir('resource/move_step04_m.wav');
-var SOUND_POISON = fullPathOfRootDir('resource/poison_fm008.wav');
-var SOUND_AHA = fullPathOfRootDir('resource/aha_voice015.wav');
+var SOUND_CLEAR = fullPathOfRootDir('resource/clear_animal01.mp3');
+var SOUND_OVER = fullPathOfRootDir('resource/gameover_animal02.mp3');
+var SOUND_HURRY = fullPathOfRootDir('resource/hurry_beep12.mp3');
+var SOUND_MEMORIZE = fullPathOfRootDir('resource/memorize_whistle00.mp3');
+var SOUND_START = fullPathOfRootDir('resource/start_whistle02.mp3');
+var SOUND_FLIP = fullPathOfRootDir('resource/flip_sha00.mp3');
+var SOUND_BINGO = fullPathOfRootDir('resource/bingo_coin03.mp3');
+var SOUND_NG = fullPathOfRootDir('resource/NG_beep14.mp3');
+//var SOUND_SEC = fullPathOfRootDir('resource/sec_kachi24.mp3');
+var SOUND_FRAME = fullPathOfRootDir('resource/frame_fire01.mp3');
+var SOUND_ICE = fullPathOfRootDir('resource/icing_freeze04.mp3');
+var SOUND_MOVE = fullPathOfRootDir('resource/move_step04_m.mp3');
+var SOUND_POISON = fullPathOfRootDir('resource/poison_fm008.mp3');
+var SOUND_AHA = fullPathOfRootDir('resource/aha_voice015.mp3');
 
 
 GAME_WIDTH = 192;
@@ -69,20 +69,20 @@ function init(){
   game.fps = FPS;
   game.rootScene.backgroundColor = 'rgb(0, 0, 0)';
   game.preload(
-    IMG_TITLE, 
+    IMG_TITLE,
     IMG_EFFECT, IMG_CARD,
     IMG_CHAR_SNOW, IMG_CHAR_FRAME, IMG_CHAR_GIRL, IMG_CHAR_SWITCH, IMG_CHAR_JOKER, IMG_CHAR_FAIRY,
-    IMG_BG_1_GLASS_GROUND, IMG_BG_2_STEPPE_COBBLED, IMG_BG_3_GLASS_TILE, IMG_BG_4_LAND_GRAVEL, 
-    IMG_BG_5_LAND_WEED, IMG_BG_6_DIRT_LEDGE, IMG_BG_7_DIRT_GRAVEL, IMG_BG_8_LAVA_ORE, 
+    IMG_BG_1_GLASS_GROUND, IMG_BG_2_STEPPE_COBBLED, IMG_BG_3_GLASS_TILE, IMG_BG_4_LAND_GRAVEL,
+    IMG_BG_5_LAND_WEED, IMG_BG_6_DIRT_LEDGE, IMG_BG_7_DIRT_GRAVEL, IMG_BG_8_LAVA_ORE,
     SOUND_CLEAR, SOUND_OVER, SOUND_HURRY, SOUND_MEMORIZE, SOUND_START, SOUND_FLIP,
-    SOUND_BINGO, SOUND_NG, /*SOUND_SEC,*/ SOUND_FRAME, SOUND_ICE, SOUND_MOVE, SOUND_POISON, SOUND_AHA, 
+    SOUND_BINGO, SOUND_NG, /*SOUND_SEC,*/ SOUND_FRAME, SOUND_ICE, SOUND_MOVE, SOUND_POISON, SOUND_AHA,
     IMG_BAR
   );
 //   // sound preload for monaca
 //   if(typeof(monaca) !== 'undefined'){
 //     monaca_sound_preload([
 //     SOUND_CLEAR, SOUND_OVER, SOUND_HURRY, SOUND_MEMORIZE, SOUND_START, SOUND_FLIP,
-//     SOUND_BINGO, SOUND_NG, /*SOUND_SEC,*/ SOUND_FRAME, SOUND_ICE, SOUND_MOVE, SOUND_POISON, SOUND_AHA, 
+//     SOUND_BINGO, SOUND_NG, /*SOUND_SEC,*/ SOUND_FRAME, SOUND_ICE, SOUND_MOVE, SOUND_POISON, SOUND_AHA,
 //     ]);
 //   }
   game.onload = function(){
