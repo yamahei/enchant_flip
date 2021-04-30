@@ -53,7 +53,11 @@ var SOUND_AHA = fullPathOfRootDir('resource/aha_voice015.mp3');
 
 
 GAME_WIDTH = 192;
-GAME_HEIGHT = 240;
+// GAME_HEIGHT = 240;
+GAME_HEIGHT = Math.floor((GAME_WIDTH / window.outerWidth) * window.outerHeight);
+if(GAME_WIDTH > GAME_HEIGHT){ GAME_HEIGHT = GAME_WIDTH; }
+if(GAME_WIDTH * 2 < GAME_HEIGHT){ GAME_HEIGHT = GAME_WIDTH * 2; }
+
 
 enchant();
 //enchant.Sound.enabledInMobileSafari = true;
@@ -62,9 +66,7 @@ if(location.protocol == 'file:') enchant.ENV.USE_WEBAUDIO = false;
 function init(){
 
   // if(typeof monaca !== "undefined"){
-  if(screen.width < screen.height){
-    GAME_HEIGHT = Math.floor((GAME_WIDTH / screen.width) * screen.height);
-  }
+    // GAME_HEIGHT = Math.floor((GAME_WIDTH / screen.width) * screen.height);
   // }
 
   var game = new enchant.Core(GAME_WIDTH, GAME_HEIGHT);//TODO: back event support
