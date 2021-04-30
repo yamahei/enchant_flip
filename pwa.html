@@ -14,8 +14,25 @@
                 overflow: hidden;
             }
         </style>
+        <!-- PWA -->
+        <link rel="manifest" href="manifest.webmanifest"></link>
+        <script>
+            window.addEventListener('load', function() {
+                if ('serviceWorker' in navigator) {
+                    const path_to_service_worke = "/enchant_flip/pwabuilder-sw.js";
+                    const register_option = {scope: "."};
+                    navigator.serviceWorker.register(path_to_service_worke, register_option)
+                    .then(function(registration) {
+                        console.log("serviceWorker registed.");
+                    }).catch(function(error) {
+                        console.warn("serviceWorker error.", error);
+                    });
+                }
+            });
+        </script>
+
         <script type="text/javascript" src="./strage.js"></script>
-        <!-- <script type="text/javascript" src="./enchant.js"></script> 0.6.2 its a buggy..? -->
+        <!-- <script type="text/javascript" src="./enchant.js"></script> 0.6.2 its a buggy about sounds..? -->
         <script type="text/javascript" src="./enchant.min.js"></script>
         <script type="text/javascript" src="./enchant-plugins/ui.enchant.js"></script>
         <script type="text/javascript" src="./game.js"></script>

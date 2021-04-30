@@ -62,7 +62,9 @@ if(location.protocol == 'file:') enchant.ENV.USE_WEBAUDIO = false;
 function init(){
 
   // if(typeof monaca !== "undefined"){
-  //   GAME_HEIGHT = Math.floor((GAME_WIDTH / screen.width) * screen.height);
+  if(screen.width < screen.height){
+    GAME_HEIGHT = Math.floor((GAME_WIDTH / screen.width) * screen.height);
+  }
   // }
 
   var game = new enchant.Core(GAME_WIDTH, GAME_HEIGHT);//TODO: back event support
