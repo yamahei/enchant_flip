@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <title>enchant</title>
+        <link rel="shortcut icon" href="promote/iconimage512x512.png"></link>
+        <title>Flip!</title>
         <style>
             #AdBlock {
                 position: absolute;
@@ -20,7 +21,7 @@
             window.addEventListener('load', function() {
                 if ('serviceWorker' in navigator) {
                     const path_to_service_worke = "/enchant_flip/pwabuilder-sw.js";
-                    const register_option = {scope: "."};
+                    const register_option = {};//{scope: "."};
                     navigator.serviceWorker.register(path_to_service_worke, register_option)
                     .then(function(registration) {
                         console.log("serviceWorker registed.");
