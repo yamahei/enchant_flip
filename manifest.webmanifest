@@ -2,6 +2,7 @@
     "theme_color": "#a13a10",
     "background_color": "#000000",
     "display": "standalone",
+    "orientation": "portrait",
     "scope": "/",
     "start_url": "pwa.html",
     "description": "神経素弱風カードゲーム",
